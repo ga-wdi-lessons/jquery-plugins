@@ -11,7 +11,6 @@
 - Research and utilize a published jQuery Plugin
 - Demonstrate the basic structure of a jQuery Plugin
 - Write your own jQuery Plugin
-- Utilize an Immediately Invoked Function Expression (IIFE) to locally scope jQuery
 
 
 ## Framing (10)
@@ -75,28 +74,28 @@ Questions:
 #### Answers (5/35)
 
 1. Where?
-  Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
+Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
 
-  Unofficially, google is your best bet.
+Unofficially, google is your best bet.
 
 2. Basic Anatomy?
-  Initialize with:
-  - a single function
-  - pass options
+Initialize with:
+- a single function
+- pass options
 
-  Some have supporting functions
+Some have supporting functions
 
 3. What do we add?
-  - Include vendor's javascript file
-  - [maybe] add provided css
-  - update our css using documented classes
-  - initialize with jQuery, js, or (sometimes) html
+- Include vendor's javascript file
+- [maybe] add provided css
+- update our css using documented classes
+- initialize with jQuery, js, or (sometimes) html
 
 4. How to install?
-  - Download, jQuery
-  - CDN, jQuery
-  - Node, Vanilla JS
-  - Rails, HTML
+- Download, jQuery
+- CDN, jQuery
+- Node, Vanilla JS
+- Rails, HTML
 
 ## I do - Fixed Content plugin
 
@@ -177,10 +176,10 @@ Because of `$('.js_fixedcontent').fixedcontent();` in `fixedContent.js` we don't
 
 ```js
 $(".js_fixedcontent").fixedcontent({
-   marginTop: 24,
-   minWidth: 767,
-   zIndex: 500
- });
+  marginTop: 24,
+  minWidth: 767,
+  zIndex: 500
+});
 ```
 
 ### Break (10/70)
@@ -189,14 +188,14 @@ $(".js_fixedcontent").fixedcontent({
 For 5 minutes:
 
 - With your partner, pick a plugin from these links
-  - [jAnimate](http://renatorib.github.io/janimate/)
-  - [Lightcase](http://cornel.bopp-art.com/lightcase/#download)
-  - [Alertify](http://alertifyjs.com/)
-  - [splitChar](https://github.com/razvanbalosin/Splitchar.js)
+- [jAnimate](http://renatorib.github.io/janimate/)
+- [Lightcase](http://cornel.bopp-art.com/lightcase/#download)
+- [Alertify](http://alertifyjs.com/)
+- [splitChar](https://github.com/razvanbalosin/Splitchar.js)
 
-  **Harder:**
-  - [Planetarium](http://www.onextrapixel.com/2014/04/01/construct-interactive-planets-and-build-the-universe-on-your-website/)
-  - [CurvedText](http://www.olivermusebrink.de/beta/curvedtext/)
+**Harder:**
+- [Planetarium](http://www.onextrapixel.com/2014/04/01/construct-interactive-planets-and-build-the-universe-on-your-website/)
+- [CurvedText](http://www.olivermusebrink.de/beta/curvedtext/)
 
 - Try and pick something you think you could reasonably attempt to code a small demo in 20 minutes
 
@@ -231,18 +230,18 @@ In `index.html`:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Greenify Demo</title>
+<meta charset="UTF-8">
+<title>Greenify Demo</title>
 </head>
 <body>
-  <!-- some headers we'll be using as click event listeners -->
-  <h1>Make a div</h1>
-  <h2>Make em green</h2>
-  <h3>Add a green div</h3>
-  <!-- including jquery and script files we'll need -->
-  <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
-  <script src='greenify.js'></script>
-  <script src='script.js'></script>
+<!-- some headers we'll be using as click event listeners -->
+<h1>Make a div</h1>
+<h2>Make em green</h2>
+<h3>Add a green div</h3>
+<!-- including jquery and script files we'll need -->
+<script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+<script src='greenify.js'></script>
+<script src='script.js'></script>
 </body>
 </html>
 ```
@@ -306,7 +305,8 @@ $(document).ready(function(){
 
     // added this function that uses the greenify function we defined above
     $.fn.addGreenDiv = function(){
-      this.append($("<div>jQuery plugins are really really cool!</div>").greenify())
+      var newDiv = $("<div>jQuery plugins are really really cool!</div>").greenify()
+      this.append(newDiv)
       return this
     }
   })(jQuery);
@@ -378,6 +378,13 @@ In `greenify.js`:
 
 > In order to submit a PR you will need to fork and clone the above repo.
 
+## Conclusion
+
+- Where do we find jQuery Plugins?
+- What are the 2 steps for utilizing a jQuery Plugin?
+- What is the basic anatomy of a jQuery plugin?
+- Why doe we love IIFEs?
+
 ## You do: More plugins! (Rest of class)
 
 Look through some of the below resources and try to implement another plugin that you think will be useful going forward!
@@ -385,13 +392,6 @@ Look through some of the below resources and try to implement another plugin tha
 - http://tutorialzine.com/2015/04/our-favorite-jquery-plugins-and-libraries-for-spring-2015/
 - http://www.creativebloq.com/jquery/top-jquery-plugins-6133175
 - http://designshack.net/articles/javascript/40-awesome-jquery-plugins-you-need-to-check-out/
-
-## Conclusion
-
-- Where do we find jQuery Plugins?
-- What are the 2 steps for utilizing a jQuery Plugin?
-- What is the basic anatomy of a jQuery plugin?
-- Why doe we love IIFEs?
 
 
 ## Additional Resources
