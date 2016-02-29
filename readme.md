@@ -191,6 +191,12 @@ For 5 minutes:
 - With your partner, pick a plugin from these links
   - [jAnimate](http://renatorib.github.io/janimate/)
   - [Lightcase](http://cornel.bopp-art.com/lightcase/#download)
+  - [Alertify](http://alertifyjs.com/)
+  - [splitChar](https://github.com/razvanbalosin/Splitchar.js)
+
+  **Harder:**
+  - [Planetarium](http://www.onextrapixel.com/2014/04/01/construct-interactive-planets-and-build-the-universe-on-your-website/)
+  - [CurvedText](http://www.olivermusebrink.de/beta/curvedtext/)
 
 - Try and pick something you think you could reasonably attempt to code a small demo in 20 minutes
 
