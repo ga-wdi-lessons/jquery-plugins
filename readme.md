@@ -185,23 +185,25 @@ $(".js_fixedcontent").fixedcontent({
 
 ### Break (10/70)
 
-### Pair up: Use a plugin!(25/95)
+### Pair up: Use a plugin!(30/100)
 For 5 minutes:
 
 - With your partner, pick a plugin from these links
-  - http://tutorialzine.com/2015/04/our-favorite-jquery-plugins-and-libraries-for-spring-2015/
-  - http://www.creativebloq.com/jquery/top-jquery-plugins-6133175
-  - http://designshack.net/articles/javascript/40-awesome-jquery-plugins-you-need-to-check-out/
+  - [jAnimate](http://renatorib.github.io/janimate/)
+  - [Lightcase](http://cornel.bopp-art.com/lightcase/#download)
 
 - Try and pick something you think you could reasonably attempt to code a small demo in 20 minutes
 
-For 20 minutes:
+For 15 minutes:
 - Attempt to install & utilize.  
 
 You've only got 20 minutes, so focus on installation and easy demo.
 
+For 10 minutes:
+- Let's have a couple groups present!
 
-## Your Own Plugin - We do (30/125)
+
+## Your Own Plugin - We do (25/125)
 
 Let's try and understand plugins a little bit deeper by creating our own custom made jQuery plugin. We'll be modeling our plugin after the one in these [jQuery docs](https://learn.jquery.com/plugins/basic-plugin-creation/#basic-plugin-authoring)
 
@@ -338,7 +340,10 @@ jQuery functions, by convention, are chainable.  We should remember to return th
 return this;
 ```
 
-## Make it a plugin
+## Break (10/130)
+
+## Make it a plugin (5/135)
+
 Our `script.js` is getting to cluttery. And our plugin definition is getting mixed in with our logic. Let's abstract this functionality into a plugin we can use in the future at any time!
 
 Remember that `greenify.js` file? What do you think goes in there?
@@ -361,17 +366,19 @@ In `greenify.js`:
 
 > make sure to get rid of any duplicate code in your `script.js` and require `greenify.js` in your `index.html`
 
-## You do - Contribute to greenify (10/135)
+## You do - Contribute to greenify (10/145)
 
 - Submit a pull request against [greenify](https://github.com/ga-dc/greenify) with a sick new feature to the greenify plugin
 
 > In order to submit a PR you will need to fork and clone the above repo.
 
-## You do: GIF of the Day (Rest of class, HW!)
+## You do: More plugins! (Rest of class)
 
-https://github.com/ga-dc/gif_of_the_day
+Look through some of the below resources and try to implement another plugin that you think will be useful going forward!
 
-
+- http://tutorialzine.com/2015/04/our-favorite-jquery-plugins-and-libraries-for-spring-2015/
+- http://www.creativebloq.com/jquery/top-jquery-plugins-6133175
+- http://designshack.net/articles/javascript/40-awesome-jquery-plugins-you-need-to-check-out/
 
 ## Conclusion
 
