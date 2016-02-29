@@ -155,7 +155,7 @@ Q. Why do we use an IIFE?
 - to locally scope jQuery.  
 - To use the $ without fear of corruption from another library.
 
-### I Do: Implementation (15/75)
+### I Do: Implementation (15/60)
 Let's create some a folder and some files we'll need for this application in the terminal:
 
 ```bash
@@ -183,9 +183,9 @@ $(".js_fixedcontent").fixedcontent({
  });
 ```
 
-### Break (10/60)
+### Break (10/70)
 
-### Pair up: Use a plugin!(25/85)
+### Pair up: Use a plugin!(25/95)
 For 5 minutes:
 
 - With your partner, pick a plugin from these links
@@ -201,7 +201,7 @@ For 20 minutes:
 You've only got 20 minutes, so focus on installation and easy demo.
 
 
-## Your Own Plugin - We do (35/120)
+## Your Own Plugin - We do (30/125)
 
 Let's try and understand plugins a little bit deeper by creating our own custom made jQuery plugin. We'll be modeling our plugin after the one in these [jQuery docs](https://learn.jquery.com/plugins/basic-plugin-creation/#basic-plugin-authoring)
 
@@ -361,7 +361,7 @@ In `greenify.js`:
 
 > make sure to get rid of any duplicate code in your `script.js` and require `greenify.js` in your `index.html`
 
-## You do - Contribute to greenify (10/130)
+## You do - Contribute to greenify (10/135)
 
 - Submit a pull request against [greenify](https://github.com/ga-dc/greenify) with a sick new feature to the greenify plugin
 
