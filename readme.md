@@ -43,7 +43,7 @@ Q. Why do we care?
 
 What can we expect from jQuery plugins?  How do we use them?
 
-### You do: Research plugins (10/10: 20/40)
+### You do: Research plugins (20/30)
 
 #### Individually for 10m:
 
@@ -72,7 +72,7 @@ Questions:
 
 ---
 
-#### Answers (5/45)
+#### Answers (5/35)
 
 1. Where?
   Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
@@ -104,7 +104,7 @@ Let's actually implement a jquery plugin together.
 
 The plugin we'll be using is [FixedContent.js](https://github.com/jeremychurch/FixedContent.js)
 
-### Fixed Content Source (5/50)
+### Fixed Content Source (5/40)
 
 The first thing I want to do is take a look at this source code so we can get a better understanding of plugins. The source code can be found [here](https://github.com/jeremychurch/FixedContent.js/blob/master/jquery.fixedcontent.js)
 
@@ -130,7 +130,7 @@ It's a little scary, but let's look at some parts we can identify
 
 > One thing we can note is this is an immediately invoked function expression. Where else have we seen this? (ST - WG). We need to use an IIFE in order for this plugin to work well with jQuery and other plugins. When we put all of this code into an IIFE, we need to pass the function `jQuery` and name the parameter `$`. If you'd like to know more about this, check this [link](https://learn.jquery.com/plugins/basic-plugin-creation/#protecting-the-alias-and-adding-scope) out.
 
-### An Aside - IIFE's (5/125)
+### An Aside - IIFE's (5/45)
 
 An Immediately Invoked Function Expression (IIFE), is exactly what it sounds like... a function that is invoked immediately.
 
@@ -154,8 +154,6 @@ Q. Why do we use an IIFE?
 > A.
 - to locally scope jQuery.  
 - To use the $ without fear of corruption from another library.
-
-### Break (10/60)
 
 ### I Do: Implementation (15/75)
 Let's create some a folder and some files we'll need for this application in the terminal:
@@ -185,7 +183,9 @@ $(".js_fixedcontent").fixedcontent({
  });
 ```
 
-### Pair up: Use a plugin!(25/90)
+### Break (10/60)
+
+### Pair up: Use a plugin!(25/85)
 For 5 minutes:
 
 - With your partner, pick a plugin from these links
@@ -201,7 +201,7 @@ For 20 minutes:
 You've only got 20 minutes, so focus on installation and easy demo.
 
 
-## Your Own Plugin - We do (30/120)
+## Your Own Plugin - We do (35/120)
 
 Let's try and understand plugins a little bit deeper by creating our own custom made jQuery plugin. We'll be modeling our plugin after the one in these [jQuery docs](https://learn.jquery.com/plugins/basic-plugin-creation/#basic-plugin-authoring)
 
@@ -361,7 +361,7 @@ In `greenify.js`:
 
 > make sure to get rid of any duplicate code in your `script.js` and require `greenify.js` in your `index.html`
 
-## You do - Contribute to greenify (10/135)
+## You do - Contribute to greenify (10/130)
 
 - Submit a pull request against [greenify](https://github.com/ga-dc/greenify) with a sick new feature to the greenify plugin
 
