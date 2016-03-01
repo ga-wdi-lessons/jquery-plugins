@@ -20,8 +20,6 @@ jQuery plugins are an extension of jQuery functionality. The idea of plugins is 
 
 Officially, plugins are "simply a new method that we use to extend jQuery's prototype object."  In practice, they enable to us to extend jQuery's functionality, from adding simple methods to jQuery objects (think `$()` or stuff wrapped in cash) to the [jQuery UI plugin](http://jqueryui.com) that is maintained by the jQuery team.
 
-> jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.
-
 Think about the `.hide()` method in jquery. Under the hood its changing some css property using javascript. Much in the same way that jquery abstracts functionality from javascript, we can leverage javascript/jQuery to build our own jquery methods. This opens up a bunch of doors.
 
 So you can see, they can be simple or rather complex.
@@ -64,6 +62,7 @@ Think and partner up to answer:
 When we get back together, we will be answering these questions, together.
 
 Questions:
+
 1. Where do we find jQuery Plugins?<br>
 2. What is the basic anatomy of a jQuery Plugin?<br>
 3. What do we add to our app to utilize them?<br>
