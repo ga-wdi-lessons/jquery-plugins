@@ -73,12 +73,12 @@ Questions:
 #### Answers (5/35)
 
 1. Where?
-Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
+- Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
 
-Unofficially, google is your best bet.
+>Unofficially, google is your best bet.
 
 2. Basic Anatomy?
-Initialize with:
+- Initialize with:
 - a single function
 - pass options
 
