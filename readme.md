@@ -72,25 +72,25 @@ Questions:
 
 #### Answers (5/35)
 
-1. Where?
+* Where?
 - Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
 
 >Unofficially, google is your best bet.
 
-2. Basic Anatomy?
+* Basic Anatomy?
 - Initialize with:
 - a single function
 - pass options
 
 Some have supporting functions
 
-3. What do we add?
+* What do we add?
 - Include vendor's javascript file
 - [maybe] add provided css
 - update our css using documented classes
 - initialize with jQuery, js, or (sometimes) html
 
-4. How to install?
+* How to install?
 - Download, jQuery
 - CDN, jQuery
 - Node, Vanilla JS
