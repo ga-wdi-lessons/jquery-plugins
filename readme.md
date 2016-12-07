@@ -35,30 +35,31 @@ Q. Why do we care?
 
 > A. Encapsulation of really cool functionality, so we can reuse and share. We stand on the shoulders of giants. There's no need to recreate the wheel if it already exists.
 
-## Basic anatomy of a jQuery Plugin?
+## Basics of jQuery Plugins
 
 What can we expect from jQuery plugins?  How do we use them?
 
-1. Where do we find jQuery Plugins?<br>
-<summary>
 <details>
+<summary>
+1. Where do we find jQuery Plugins?<br>
+</summary>
 Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
 </details>
-</summary>
 
-2. What is the basic anatomy of a jQuery Plugin?<br>
-<summary>
 <details>
-
-Basic Anatomy?
-- Initialize with:
- - a single function called an IIFE
- - pass options
-- Style guidelines ask that you add only one function per plugin.
-</details>
+<summary>
+2. What is the basic anatomy of a jQuery Plugin?
 </summary>
+<h4>Basic Anatomy:</h4>
+1. a single function called an IIFE
 
-### An Aside - IIFE's (5 min / 15 min total)
+<br>
+2. `return this //allows jQuery function-chaining`
+<br>
+3. Plugin authoring guidelines ask that you add only one function per plugin.
+</details>
+
+### IIFEs (5 min / 15 min total)
 
 An Immediately Invoked Function Expression (IIFE), is exactly what it sounds like... a function that is invoked immediately.
 
@@ -115,7 +116,7 @@ It's a little scary, but let's look at some parts we can identify
 }(jQuery));
 ```
 
-> One thing we can note is this is an immediately invoked function expression. Where else have we seen this? (ST - WG). We need to use an IIFE in order for this plugin to work well with jQuery and other plugins. When we put all of this code into an IIFE, we need to pass the function `jQuery` and name the parameter `$`. If you'd like to know more about this, check this [link](https://learn.jquery.com/plugins/basic-plugin-creation/#protecting-the-alias-and-adding-scope) out.
+> One thing we can note is this is an immediately invoked function expression. Where else have we seen this? We need to use an IIFE in order for this plugin to work well with jQuery and other plugins. When we put all of this code into an IIFE, we need to pass the function `jQuery` and name the parameter `$`. If you'd like to know more about this, check this [link](https://learn.jquery.com/plugins/basic-plugin-creation/#protecting-the-alias-and-adding-scope) out.
 
 ### I Do: Implementation (10min / 30min total)
 Let's create some folder and some files we'll need for this application in the terminal:
@@ -265,6 +266,7 @@ $(document).ready(function(){
 Click on that `h3` and you should see a green `jQuery plugins are really really cool!`
 
 ## Don't break the chain!
+> Let's break some stuff! Then fix it.
 
 Something we haven't talked about is the fact that we return `this` in our plugin definition. If we try out our code as it stands, it works great. Try removing
 
@@ -272,7 +274,7 @@ Something we haven't talked about is the fact that we return `this` in our plugi
 return this
 ```
 
-You'll see that that the `h1` and `h2` functionalities are still working great, but the `h3` no longer works. Why do you think this is? (ST - WG)
+You'll see that that the `h1` and `h2` functionalities are still working great, but the `h3` no longer works. Why do you think this is?
 
 In our `addGreenDiv` function we call greenify on a hard coded div. If `greenify` doesn't have an explicit return(ie. missing `return this`), it returns `undefined` it appends something that is `undefined`.
 
