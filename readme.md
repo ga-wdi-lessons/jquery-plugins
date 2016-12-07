@@ -8,12 +8,11 @@
 
 - Define what a jQuery plugin is
 - Describe where to find existing jQuery Plugins (and how to install them)
-- Research and utilize a published jQuery Plugin
 - Demonstrate the basic structure of a jQuery Plugin
 - Write your own jQuery Plugin
 
 
-## Framing (10)
+## Framing (10 min / 10 min total)
 jQuery plugins are an extension of jQuery functionality. The idea of plugins is that you could build most of these on your own, but someone else already has! Many of the plugins that are out there are functionalities you're capable of building yourself. Only, now you don't have too. You can just use other people's stuff, it's great. As far as programming goes, we're not learning anything radically new.
 
 **What are jQuery Plugins?**
@@ -40,69 +39,59 @@ Q. Why do we care?
 
 What can we expect from jQuery plugins?  How do we use them?
 
-### You do: Research plugins (20/30)
-
-#### Individually for 10m:
-
-Start in https://learn.jquery.com/plugins/
-
-Review the below plugins:
-- [isotope.metafizzy.co](http://isotope.metafizzy.co)
-- [packery.metafizzy.co](http://packery.metafizzy.co)
-- [tablesorter](http://tablesorter.com/docs/#Introduction)
-
-Think and partner up to answer:
-- look for commonality
-- look for patterns
-- look for convention
-- look for installation/configuration
-
-#### Break into groups for 10m.  
-
-When we get back together, we will be answering these questions, together.
-
-Questions:
-
 1. Where do we find jQuery Plugins?<br>
+<summary>
+<details>
+Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
+</details>
+</summary>
+
 2. What is the basic anatomy of a jQuery Plugin?<br>
-3. What do we add to our app to utilize them?<br>
-4. Name some ways to install/initialize a jQuery plugin.
-
----
-
-#### Answers (5/35)
-
-Where?
-- Officially a large list of Plugins have moved to: https://www.npmjs.com/browse/keyword/jquery-plugin
-
->Unofficially, google is your best bet.
+<summary>
+<details>
 
 Basic Anatomy?
 - Initialize with:
-- a single function
-- pass options
+ - a single function called an IIFE
+ - pass options
+- Style guidelines ask that you add only one function per plugin.
+</details>
+</summary>
 
->Some have supporting functions
+### An Aside - IIFE's (5 min / 15 min total)
 
-What do we add?
-- Include vendor's javascript file
-- [maybe] add provided css
-- update our css using documented classes
-- initialize with jQuery, js, or (sometimes) html
+An Immediately Invoked Function Expression (IIFE), is exactly what it sounds like... a function that is invoked immediately.
 
-How to install?
-- Download, jQuery
-- CDN, jQuery
-- Node, Vanilla JS
-- Rails, HTML
+```js
+(function(){
+  // add some code here,
+  //   including other functions.
 
-## I do - Fixed Content plugin
+})() // and then invoke it immediately
+```
+
+See those trailing parens?  We define an anonymous function and immediately invoke it.
+
+Why would we do that?  Read
+- [jQuery Best Practices](http://gregfranko.com/blog/jquery-best-practices/)
+- [I love my IIFE](http://gregfranko.com/blog/i-love-my-iife/)
+
+Q. Why do we use an IIFE?
+---
+
+> A.
+- to locally scope jQuery.  
+- To use the $ without fear of corruption from another library.
+---
+
+
+## We do - Fixed Content plugin
 
 Let's actually implement a jquery plugin together.
 
 The plugin we'll be using is [FixedContent.js](https://github.com/jeremychurch/FixedContent.js)
 
-### Fixed Content Source (5/40)
+### Fixed Content Source (5min / 20min total)
 
 The first thing I want to do is take a look at this source code so we can get a better understanding of plugins. The source code can be found [here](https://github.com/jeremychurch/FixedContent.js/blob/master/jquery.fixedcontent.js)
 
@@ -128,33 +117,8 @@ It's a little scary, but let's look at some parts we can identify
 
 > One thing we can note is this is an immediately invoked function expression. Where else have we seen this? (ST - WG). We need to use an IIFE in order for this plugin to work well with jQuery and other plugins. When we put all of this code into an IIFE, we need to pass the function `jQuery` and name the parameter `$`. If you'd like to know more about this, check this [link](https://learn.jquery.com/plugins/basic-plugin-creation/#protecting-the-alias-and-adding-scope) out.
 
-### An Aside - IIFE's (5/45)
-
-An Immediately Invoked Function Expression (IIFE), is exactly what it sounds like... a function that is invoked immediately.
-
-```js
-(function(){
-  // add some code here,
-  //   including other functions.
-
-})() // and then invoke it immediately
-```
-
-See those trailing parens?  We define an anonymous function and immediately invoke it.
-
-Why would we do that?  Read
-- [jQuery Best Practices](http://gregfranko.com/blog/jquery-best-practices/)
-- [I love my IIFE](http://gregfranko.com/blog/i-love-my-iife/)
-
-Q. Why do we use an IIFE?
----
-
-> A.
-- to locally scope jQuery.  
-- To use the $ without fear of corruption from another library.
-
-### I Do: Implementation (15/60)
-Let's create some a folder and some files we'll need for this application in the terminal:
+### I Do: Implementation (10min / 30min total)
+Let's create some folder and some files we'll need for this application in the terminal:
 
 ```bash
 mkdir fixedcontent_demo
@@ -181,33 +145,7 @@ $(".js_fixedcontent").fixedcontent({
 });
 ```
 
-### Break (10/70)
-
-### Pair up: Use a plugin!(30/100)
-For 5 minutes:
-
-- With your partner, pick a plugin from these links
-- [jAnimate](http://renatorib.github.io/janimate/)
-- [Lightcase](http://cornel.bopp-art.com/lightcase/#download)
-- [Alertify](http://alertifyjs.com/)
-- [splitChar](https://github.com/razvanbalosin/Splitchar.js)
-
-**Harder:**
-- [Planetarium](http://www.onextrapixel.com/2014/04/01/construct-interactive-planets-and-build-the-universe-on-your-website/)
-- [CurvedText](http://www.olivermusebrink.de/beta/curvedtext/)
-
-- Try and pick something you think you could reasonably attempt to code a small demo in 20 minutes
-
-For 15 minutes:
-- Attempt to install & utilize.  
-
-You've only got 20 minutes, so focus on installation and easy demo.
-
-For 10 minutes:
-- Let's have a couple groups present!
-
-
-## Your Own Plugin - We do (25/125)
+## Your Own Plugin - You do (20min / 50min total)
 
 Let's try and understand plugins a little bit deeper by creating our own custom made jQuery plugin. We'll be modeling our plugin after the one in these [jQuery docs](https://learn.jquery.com/plugins/basic-plugin-creation/#basic-plugin-authoring)
 
@@ -345,9 +283,7 @@ jQuery functions, by convention, are chainable.  We should remember to return th
 return this;
 ```
 
-## Break (10/130)
-
-## Make it a plugin (5/135)
+## Make it a plugin
 
 Our `script.js` is getting to cluttery. And our plugin definition is getting mixed in with our logic. Let's abstract this functionality into a plugin we can use in the future at any time!
 
@@ -370,23 +306,6 @@ In `greenify.js`:
 ```
 
 > make sure to get rid of any duplicate code in your `script.js` and require `greenify.js` in your `index.html`
-
-## You do - Contribute to greenify (10/145)
-
-- Submit a pull request against [greenify](https://github.com/ga-dc/greenify) with a sick new feature to the greenify plugin
-
-> In order to submit a PR you will need to fork and clone the above repo.
-
-## Conclusion
-
-- Where do we find jQuery Plugins?
-- What are the 2 steps for utilizing a jQuery Plugin?
-- What is the basic anatomy of a jQuery plugin?
-- Why doe we love IIFEs?
-
-## You do: More plugins! (Rest of class)
-
-Look through some of the below resources and try to implement another plugin that you think will be useful going forward!
 
 - http://tutorialzine.com/2015/04/our-favorite-jquery-plugins-and-libraries-for-spring-2015/
 - http://www.creativebloq.com/jquery/top-jquery-plugins-6133175
